@@ -1,0 +1,172 @@
+html{
+    background-image: url("../images/bats.gif")!important;
+    background-repeat: repeat;
+}
+
+body{
+    font-family: sans-serif;
+    width: 800px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0px 13px 14px 7px;
+    margin: 1em auto;
+}
+header{
+    border-bottom: 2px solid black;
+    background-image: linear-gradient(45deg, white, orange, black);
+    padding: 1em 0;
+}
+header h2{
+    font-size: 250%;
+    font-weight: bold;
+   /* color: orange;
+    font-style: italic;
+    text-shadow: 2px 2px 2px black; */
+    color: black;
+    text-indent: 1.5px;
+    line-height: 3px;
+}
+header h3{
+    font-size: 125%;
+    text-indent: 1px;
+    line-height: 0px;
+}
+
+body h1{
+    font-size: 150%;
+}
+body h1, h2, h3, p, ul{
+    padding: 0em 1em;
+}
+body h1:first-child::first-letter{
+    font-size: 200%;
+}
+header img{
+    float: left;
+    padding: 0.5em 1em;
+}
+body p{
+    font-size: 110;
+    font-weight: 100;
+}
+a:link{
+    color: orange;
+    font-weight: bold;
+}
+a:hover, a:focus{
+    color: green;
+}
+ul{
+     margin: 0 1.05em;
+    padding-top: 2em;
+    line-height: 1.5em;
+}
+li{
+    font-size: 110%;
+    padding-left: 0.25em;
+}
+/*footer{
+    border-top: 2px solid black;
+    background-image: linear-gradient(45deg, black, orange, white);
+    clear: both;
+    padding-top: 5px;
+}
+footer p{
+    font-size: 80%;
+    text-align: center;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    margin: 0%;
+}*/
+aside{
+    float:left;
+    width: 160px;
+    height: 600px;
+    /*border: 2px solid red;*/
+}
+aside ul{
+    list-style-type: none;
+    margin-left: 0.5em;
+}
+#nav_vertical ul li{
+    width: 108px;
+    margin-bottom: 0.5em;
+    border: 3px solid black;
+    padding: 0;
+}
+#nav_vertical ul li a {
+    display:block ;
+    text-decoration: none;
+    padding: 0.25em 0.5em;
+    color: black;
+    font-size: 100%;
+    background-color: orange;
+    font-weight: bold;
+}
+#nav_vertical ul li a:hover, #nav_vertical ul li a:focus{
+    background-color:gray;
+}
+footer{
+    font-size: 90%;
+    text-align:center;
+    border-top: 2px solid black;
+    padding: 0.5em 1em;
+    line-height: 1px;
+    clear:left;
+    background-image: linear-gradient(45deg, white, orange, black) !important;
+}
+section {
+    /*border:2px solid red;*/
+    float: right;
+    width: 80%;
+}
+#nav_menu ul{
+    list-style-type: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+#nav_menu ul li{
+    float: left;
+    padding: 0;
+}
+#nav_menu ul li a{
+    text-align: center;
+    display: block;
+    width: 160px;
+    padding: 0.5em 0;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-weight: 210;
+}
+#nav_menu ul ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+#nav_menu ul ul li{
+    float: none;
+}
+#nav_menu ul li:hover > ul{
+    display: block;
+}
+#nav_menu > ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+#nav_menu ul li a.current{
+    color: orange;
+}
+#nav_menu ul li a:hover, #nav_menu ul li a:focus{
+    background-color: gray;
+}
+
+#unchanged area{
+    color: orange;
+}
+
+#unchanged a:visited{
+    color: orange;
+}
