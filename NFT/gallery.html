@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <script>
+
+    $(document).ready(function(){
+        $( "input[type=checkbox]" ).each(function( ) {
+        $(this).change(toggleCheckbox);
+        });
+    });
+
+    function toggleCheckbox(e) {
+            var trait_type = e.target.name;
+            var trait_value = e.target.value;
+            //console.log(e.target.value);
+            //for loop for first 50 json file, inside for loop -> if statement -> contains the trait_type and then same trait_type value (same), add an img tag to an htmlstring, after for loop htlml function to html string containing img tag. (He told to prefer exercise 9 to solve this toggle function.)
+            for(var i=0; i<trait_value.length; i++) {
+                if(value==trait_type && name==value){
+                    htmlStr += "<img" + trait_type[i] + ">";
+                    htmlStr += "<img" + trait_value[i] + ">";
+                }
+
+            }
+            $("img").innerHTML = htmlStr;
+        }
+
+
+
+
+
+
+        //var allCheckboxes = document.querySelectorAll('input[type=checkbox]');
+        //var traits = Array.from(document.querySelectorAll('.trait'));
+        //var checked = {};
+
+        //getChecked('background');
+        //getChecked('offhand');
+        //getChecked('outfit');
+        //getChecked('accessories');
+        //getChecked('mouth');
+        //getChecked('mus');
+        //getChecked('position');
+
+        //Array.prototype.forEach.call(allCheckboxes, function
+        //(el){
+           // el.addEventListener('change', toggleCheckbox);
+        //});
+
+        
+
+        //function getChecked(name) {
+          //  checked[name] = Array.from(document.querySelectorAll('input[name='+name + ']:checked')).map(function(el){
+            //    returnel.value;
+            //});
+        //}
+
+       // function setVisibility() {
+         //   traits.map(function (el){
+           //     var background = 
+             //   checked.background.length ?
+               // _.intersection(Array.from(el.classList),
+                //checked.background).length:true;
+                //var offhand = 
+                //checked.offhand.length ?
+                //_.intersection(Array.from(el.classList),
+                //checked.offhand).length:true;
+                //var outfit = 
+                //checked.outfit.length ?
+                //_.intersection(Array.from(el.classList),
+                //checked.outfit).length:true;
+              //  var accessories = 
+              //  checked.accessories.length ?
+              //  _.intersection(Array.from(el.classList),
+              //  checked.accessories).length:true;
+              //  var mouth = 
+              //  checked.mouth.length ?
+              //  _.intersection(Array.from(el.classList),
+              //  checked.mouth).length:true;
+              //  var mus = 
+             //   checked.mus.length ?
+             //   _.intersection(Array.from(el.classList),
+              //  checked.mus).length:true;
+                //var position = 
+                //checked.position.length ?
+              //  _.intersection(Array.from(el.classList),
+               // checked.position).length:true;
+               // if(background && offhand && outfit && accessories && mouth && mus && position) {
+                //    el.style.display ='block';
+               // } else {
+                  //  el.style.display ='none';
+                //}
+
+           // });
+        //}
+        
+    </script>
+</head>
+<body>
+    <header>
+        <img src="images/logo-1.png" class="logoimg"alt="nft logo" width="100" height="100">
+        <h2>S7NS Station</h2>
+        <h3>Explore, Collect, and Sell NFTs</h3>
+    </header>
+
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="#">Explore</a>
+        <a href="#">Stats</a>
+        <a href="#">Resources</a>
+        <a href="#">Create</a>
+        <div class="search-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Search.." id="search" name="search">
+              <button type="submit" id="submit" onclick="submit()">Submit</button>
+            </form>
+          </div>
+    </div>
+
+    <section>
+        <a href="detail.html?Background=Orange Lightning Effect&Offhand=Ticket&Outfit=Wrath Olive Leather Jacket&Accessories=Gold Hoop&Mouth=LOL&Position=Right&img=https://s7nspfp.mypinata.cloud/ipfs/QmTuuc9aLofhVDXA5sYzwURvKKU21AxPw23AMGxxdFc4Fe"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmTuuc9aLofhVDXA5sYzwURvKKU21AxPw23AMGxxdFc4Fe"></a>
+        <a href="detail.html?Background=Gluttony Fruit&Offhand=Sake&Outfit=Grey Skull Shirt&Accessories=Helmet&Mouth=Joy&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmWXGwFKN7C1Uco6teN2tcxchj7XhGzQQjEc1kASYqmnjR"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmWXGwFKN7C1Uco6teN2tcxchj7XhGzQQjEc1kASYqmnjR"></a>
+        <a href="detail.html?Background=Gluttony Fruit&Offhand=Fox Mask&Outfit=Camo Bulletproof Vest&Accessories=Helmet&Mouth=Canine&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmdEZsGJFNbJMkW6zsG8tN87xqvZUBzUL5WejL4GA6QMfa"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmdEZsGJFNbJMkW6zsG8tN87xqvZUBzUL5WejL4GA6QMfa"></a>
+        <a href="detail.html?Background=Gluttony Fruit&Offhand=Floor Sweeper&Outfit=Gluttony Fruit Shirt&Accessories=Helmet&Mouth=Surprised&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmZGUAxvUvSWM5kFwkxdRb1NVBnc5S3i6FRC9spg1Ry22G"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmZGUAxvUvSWM5kFwkxdRb1NVBnc5S3i6FRC9spg1Ry22G"></a>
+        <a href="detail.html?Background=Gluttony Fruit&Offhand=Ice Cream&Outfit=Gluttony Manto&Accessories=Helmet&Mouth=Surprised&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmXZZrgdbxp8QXBWYo1kMteG1Ay51VaL87Z7FuAnu84yfy"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmXZZrgdbxp8QXBWYo1kMteG1Ay51VaL87Z7FuAnu84yfy"></a>
+        <a href="detail.html?Background=Gluttony Fruit&Offhand=Spray Paint&Outfit=Gluttony Purple Leather Jacket&Accessories=Helmet&Mouth=Canine&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmR8wQm2ZSpzmtjpJjJModoFevpE5ZeVUQoXwKNzRzXHpS"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmR8wQm2ZSpzmtjpJjJModoFevpE5ZeVUQoXwKNzRzXHpS"></a>
+        <a href="detail.html?Background=Gluttony Fruit&Offhand=Pistol&Outfit=Gluttony Denim Jacket&Accessories=Helmet&Mouth=Joy&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmUJt5ttneGkzt96RU1MCvniZzcXDsq84ZpDKNbv7uepY2"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmUJt5ttneGkzt96RU1MCvniZzcXDsq84ZpDKNbv7uepY2"></a>
+        <a href="detail.html?Background=Gluttony Fruit&Offhand=Tachi&Outfit=S7 Jacket With Backpack&Accessories=Helmet&Mouth=Grin&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/Qma3rFmy83VqQmDSajhfe5z83YBk1BuPdDPpvmD65Ydfka"><img src="https://s7nspfp.mypinata.cloud/ipfs/Qma3rFmy83VqQmDSajhfe5z83YBk1BuPdDPpvmD65Ydfka"></a>
+        <a href="detail.html?Background=Gluttony Fruit&Offhand=Sakura Mask&Outfit=Gluttony Silky Bomber Jacket&Accessories=Helmet&Mouth=Gluttony Mus&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/Qmf4y96b84yvvRJ7nFLwZ6ee2fvJ7jF4Z2CUcVqrHHjBvV"><img src="https://s7nspfp.mypinata.cloud/ipfs/Qmf4y96b84yvvRJ7nFLwZ6ee2fvJ7jF4Z2CUcVqrHHjBvV"></a>
+        <a href="detail.html?Background=Gluttony Fruit&Offhand=Pistol&Outfit=Gluttony Yukata&Accessories=Helmet&Mouth=Gluttony Mus&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmSg7AE6ca31VvMGC72vtvTgQm2fJWuVo9vVMEQJj6cfGk"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmSg7AE6ca31VvMGC72vtvTgQm2fJWuVo9vVMEQJj6cfGk"></a>
+        <a href="detail.html?Background=Gluttony Fruit&Offhand=Sake&Outfit=Gluttony Sweatshirt&Accessories=Helmet&Mouth=Gluttony Mus&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/Qmat2nNNca31TEHBG74kLnAxpYuKBpybdmX3AKpggUvFrf"><img src="https://s7nspfp.mypinata.cloud/ipfs/Qmat2nNNca31TEHBG74kLnAxpYuKBpybdmX3AKpggUvFrf"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Ball Mask&Outfit=Greed Denim Jacket&Mus=Greed Mus&Mouth=Sly&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmVknXaHDZZ4LZSJcTDJtWV2urWYfm2f7dw72XNUpZjs94"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmVknXaHDZZ4LZSJcTDJtWV2urWYfm2f7dw72XNUpZjs94"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Fox Mask&Outfit=Greed Olive Leather Jacket&Mus=Greed Mus&Mouth=Smoke&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmbYCT6BD6RNf85RHGnxpmq8w7ubNa5TbR7YdYGeYDxCP9"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmbYCT6BD6RNf85RHGnxpmq8w7ubNa5TbR7YdYGeYDxCP9"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Tachi&Outfit=Greed Denim Jacket&Mus=Greed Mus&Mouth=Cigar&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmU8v9Q89f1A4VJ2ekHWNQFtVLw8aZ2A2NvSG4zuiwxtmR"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmU8v9Q89f1A4VJ2ekHWNQFtVLw8aZ2A2NvSG4zuiwxtmR"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Ice cream&Outfit=Vest&Accessories=Surgery Scar&Mouth=Lollipop&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmZvuD5BG3GA2nyzfcUTjHULNLiQZzZ1a6iQ2zghN8gBRC"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmZvuD5BG3GA2nyzfcUTjHULNLiQZzZ1a6iQ2zghN8gBRC"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Ball Mask&Outfit=Vest&Mus=Greed Mus&Mouth=Lollipop&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmZbS6iXw2P3axKqdCMdSJeTf2u6eqvKc8xZmjHhad9DKz"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmZbS6iXw2P3axKqdCMdSJeTf2u6eqvKc8xZmjHhad9DKz"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Tachi&Outfit=S7 Jacket With Backpack&Mus=Greed Mus&Mouth=Cigar&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmPfbaohCHzQtyAb2Q5LrrvQWokP2QySHEi6jSgKxcmbV6"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmPfbaohCHzQtyAb2Q5LrrvQWokP2QySHEi6jSgKxcmbV6"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Football&Outfit=Greed Silky Bomber Jacket&Mus=Greed Mus&Mouth=Sly&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmZT7SBKB39ucsDDftcaiBYuU3sCL7fRaLZtB3hzcPqfMm"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmZT7SBKB39ucsDDftcaiBYuU3sCL7fRaLZtB3hzcPqfMm"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Sakura Mask&Outfit=Greed Fruit Shirt&Mus=Greed Mus&Mouth=Cigar&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmX8bHF4EsQQZk85kzd222DbR29DSoDVwATGondhbmaqL3"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmX8bHF4EsQQZk85kzd222DbR29DSoDVwATGondhbmaqL3"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Sake&Outfit=Greed Olive Leather Jacket&Mus=Greed Mus&Mouth=Yummy&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmcANMRmsjwpWJbRiRKdcApVTNaWpwUiYHBaf6CD8Q6kbf"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmcANMRmsjwpWJbRiRKdcApVTNaWpwUiYHBaf6CD8Q6kbf"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=If you know you know&Outfit=X T-Shirt&Mus=Greed Mus&Mouth=Yummy&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmUqWsjJw3CzNDnMwLD2S2RHaWzuxQoz7KGh5NKDpC7zER"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmUqWsjJw3CzNDnMwLD2S2RHaWzuxQoz7KGh5NKDpC7zER"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Tachi&Outfit=Greed Manto&Mus=Greed Mus&Mouth=Smile&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmdWLdBoboVpETUVm8CqVakoLfVq9kBEKNEJJ8a2CJLMsN"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmdWLdBoboVpETUVm8CqVakoLfVq9kBEKNEJJ8a2CJLMsN"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Poker&Outfit=Greed Amber Suede Jacket&Mus=Greed Mus&Mouth=Frown&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmXqeKA1591oV5bAfGx5689bTNr2skka4SKyBm4MSFht9Q"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmXqeKA1591oV5bAfGx5689bTNr2skka4SKyBm4MSFht9Q"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Spray Paint&Outfit=S7 Jacket With Backpack&Mus=Greed Mus&Mouth=Grin&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmbW5fmLHtcYxbSjHhFUUxjjDTxZgsYFBsfvnz6dnkqsyZ"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmbW5fmLHtcYxbSjHhFUUxjjDTxZgsYFBsfvnz6dnkqsyZ"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Spray Paint&Outfit=S7 Jacket With Backpack&Mus=Greed Mus&Mouth=Smile&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmdjNBbkkK6KaoJbLbHsrHCRXM8geoTjNAom4YEpAe2vPo"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmdjNBbkkK6KaoJbLbHsrHCRXM8geoTjNAom4YEpAe2vPo"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Sakura Mask&Outfit=Greed Denim Jacket&Mus=Greed Mus&Mouth=Surprised&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmQUPGSLkiJU2keRS1j24ocipgeCpZgXD1DTp8QSc4uovF"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmQUPGSLkiJU2keRS1j24ocipgeCpZgXD1DTp8QSc4uovF"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Football&Outfit=Greed Purple Leather Jacket&Mus=Greed Mus&Mouth=Grin&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmQUkX2kTxQu2NGV7pQkHFTE7iUJCKvvL8VN6NbtD3YdvD"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmQUkX2kTxQu2NGV7pQkHFTE7iUJCKvvL8VN6NbtD3YdvD"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=If you know you know&Outfit=Greed T-Shirt&Mus=Greed Mus&Mouth=Smile&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmfPdtjn3BmnPG9fnnMgLRA74ZapN9bAasQpehXAxawSmK"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmfPdtjn3BmnPG9fnnMgLRA74ZapN9bAasQpehXAxawSmK"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Ice cream&Outfit=Red S7 Jacket With Backpack&Mus=Greed Mus&Mouth=Frown&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmTAL5Ztsdqq7FvkxkANQKy7PXtPAgEaks8oyzg2n5hV84"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmTAL5Ztsdqq7FvkxkANQKy7PXtPAgEaks8oyzg2n5hV84"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Football&Outfit=Greed Blue Suede Jacket&Mus=Greed Mus&Mouth=Frown&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmcCEQBPTaGDbqkgq1t5JHgQqbeTf5HiNaRW3MDCSVgh6r"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmcCEQBPTaGDbqkgq1t5JHgQqbeTf5HiNaRW3MDCSVgh6r"></a>
+        <a href="detail.html?Background=Greed Fruit&Offhand=Floor Sweeper&Outfit=Greed Amber Suede Jacket&Mus=Greed Mus&Mouth=Canine&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmRiPGwhVWGWrwhbSxoaypDaJYkaP4a9D6TStdPHgJFYFA"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmRiPGwhVWGWrwhbSxoaypDaJYkaP4a9D6TStdPHgJFYFA"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Basketball&Outfit=X T-Shirt&Mus=Greed Mus&Mouth=Bubble&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/Qmdt3LouVLBtfnQ1wBTBapC6A1qoZpoUz8zRvVKPDh7bey"><img src="https://s7nspfp.mypinata.cloud/ipfs/Qmdt3LouVLBtfnQ1wBTBapC6A1qoZpoUz8zRvVKPDh7bey"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Spray Paint&Outfit=Greed Fruit Shirt&Mus=Greed Mus&Mouth=Sly&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmaWR1bLggGL96smaxyx6fbvNhk3iPCW7xyhH65KWQ55EL"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmaWR1bLggGL96smaxyx6fbvNhk3iPCW7xyhH65KWQ55EL"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Sakura Mask&Outfit=Greed Silky Bomber Jacket&Mus=Greed Mus&Mouth=Sly&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmY94DaeRJNouHVKaGTwCt4Lv3GHoB5reTZ9zFaWtr22X8"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmY94DaeRJNouHVKaGTwCt4Lv3GHoB5reTZ9zFaWtr22X8"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Poker&Outfit=Greed Silky Bomber Jacket&Mus=Greed Mus&Mouth=Surprised&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmT1oJbJBUx5K9gHaBPX72NYuzaCRHhCqeKnDrHVWk9TXR"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmT1oJbJBUx5K9gHaBPX72NYuzaCRHhCqeKnDrHVWk9TXR"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Ice cream&Outfit=Greed Sweatshirt&Mus=Greed Mus&Mouth=Smile&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmWDddisBuaQiMYff3H2SYXhyBb2yZecheNojXRdNYZRB5"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmWDddisBuaQiMYff3H2SYXhyBb2yZecheNojXRdNYZRB5"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Ice cream&Outfit=Greed Silky Bomber Jacket&Mus=Greed Mus&Mouth=Smoke&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmeU2HRwJHcDhcH55sJAvgm2j8GiGjVuaAqmxHYQKnzXwH"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmeU2HRwJHcDhcH55sJAvgm2j8GiGjVuaAqmxHYQKnzXwH"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Ball Mask&Outfit=Greed Manto&Accessories=S7 Mask&Mouth=Smile&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmeXWqCr4YZqQHg5RgxVXZjSif1UhiQTJBo7VELppF4R1V"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmeXWqCr4YZqQHg5RgxVXZjSif1UhiQTJBo7VELppF4R1V"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Ice cream&Outfit=Vest&Accessories=Surgery Scar&Mouth=Lollipop&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmZNfCTNtfgGPRwYZDwRYPp2dQ2HMt4t6dtcfWy21zfhTJ"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmZNfCTNtfgGPRwYZDwRYPp2dQ2HMt4t6dtcfWy21zfhTJ"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Paint Spray&Outfit=Greed Amber Leather Jacket&Mus=Greed Mus&Mouth=Lollipop&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmPJra3ewm5TvGsa4uYn4BnbJGEsc3k4RAzMVQtP4jWjsW"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmPJra3ewm5TvGsa4uYn4BnbJGEsc3k4RAzMVQtP4jWjsW"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Paint Spray&Outfit=Brown 7 Jacket&Mus=Greed Mus&Mouth=Cigar&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/Qma6LN7L5VHLGUquiRD3xRhX3kenZKU6MNGRzAePKfVrFC"><img src="https://s7nspfp.mypinata.cloud/ipfs/Qma6LN7L5VHLGUquiRD3xRhX3kenZKU6MNGRzAePKfVrFC"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Paint Spray&Outfit=Vest&Mus=Greed Mus&Mouth=Smile&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmdaGZoc8b6JcuQHsKu8qSZDf2sxyyqaU77SvHqhdbhb7x"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmdaGZoc8b6JcuQHsKu8qSZDf2sxyyqaU77SvHqhdbhb7x"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Paint Spray&Outfit=Greed Silky Bomber Jacket&Mus=Greed Mus&Mouth=Frown&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmV6FWnaaMdBh5o9nNCeEq84rzQc48G71uaQAN5Ek44WF4"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmV6FWnaaMdBh5o9nNCeEq84rzQc48G71uaQAN5Ek44WF4"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=S7 Token&Outfit=Greed Manto&Mus=Greed Mus&Mouth=Smile&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmVqQyKYNo14R3WKvaPtX5HLGM5zd3K2hkxjPSKsb2raNP"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmVqQyKYNo14R3WKvaPtX5HLGM5zd3K2hkxjPSKsb2raNP"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Ball Mask&Outfit=Green 7 Jacket&Mus=Greed Mus&Mouth=Grin&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmV5jxdtkTyhqYjMXs1yCdvUFYKtLELBVPqx8cPPHeuZXQ"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmV5jxdtkTyhqYjMXs1yCdvUFYKtLELBVPqx8cPPHeuZXQ"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Paint Spray&Outfit=Greed Amber Suede Jacket&Mus=Greed Mus&Mouth=Grin&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmaSxedipCezWudSuHKKaYLVoXJS56FPJz4EsEjxr9J7nS"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmaSxedipCezWudSuHKKaYLVoXJS56FPJz4EsEjxr9J7nS"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Floor Sweeper&Outfit=Greed Purple Leather Jacket&Mus=Greed Mus&Mouth=Smile&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/Qmc2gKBqAtdiqesHcYrYRHpzQNm2dh1JayHmE9hJsUXQJN"><img src="https://s7nspfp.mypinata.cloud/ipfs/Qmc2gKBqAtdiqesHcYrYRHpzQNm2dh1JayHmE9hJsUXQJN"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Tachi&Outfit=Grey Skull Shirt&Mus=Greed Mus&Mouth=Surprised&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmNiRfexehFQMPvFUTrtbMRAD7Z5r22jseubzCaUC5Lshy"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmNiRfexehFQMPvFUTrtbMRAD7Z5r22jseubzCaUC5Lshy"></a>
+        <a href="detail.html?Background=Eth. Graffiti&Offhand=Paint Spray&Outfit=Greed Manto&Mus=Greed Mus&Mouth=Frown&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmPZi9TkUvdnBFmiBcFbZ4UsdTggWiiC9Gjv1nransgD1T"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmPZi9TkUvdnBFmiBcFbZ4UsdTggWiiC9Gjv1nransgD1T"></a>
+        <a href="detail.html?Background=Lust Fruit&Offhand=Sakura Mask&Outfit=Lust Purple Leather Jacket&Mus=Lust Mus&Mouth=Smile&Position=Left&img=https://s7nspfp.mypinata.cloud/ipfs/QmPbvb3k7ePY9WZKdFENeBPkLT9SXYJbDWFjEnzxoy6oZ2"><img src="https://s7nspfp.mypinata.cloud/ipfs/QmPbvb3k7ePY9WZKdFENeBPkLT9SXYJbDWFjEnzxoy6oZ2"></a>
+    </section>
+
+    <aside>
+        <h4>Background</h4>
+        <div>
+            <div><input type="checkbox" name="background" value="OLE" id="OLE"><label for="OLE">Orange Lightning Effect</label></div>
+            <div><input type="checkbox" name="background" value="GF" id="GF"><label for="GF">Gluttonny Fruit</label></div>
+            <div><input type="checkbox" name="background" value="GRF" id="GRF"><label for="GRF">Greed Fruit</label></div>
+            <div><input type="checkbox" name="background" value="EG" id="EG"><label for="EG">Eth. Graffiti</label></div>
+            <div><input type="checkbox" name="background" value="LF" id="LF"><label for="LF">Lust Fruit</label></div>
+        </div>
+        <h4>Offhand</h4>
+        <div>
+            <div><input type="checkbox" name="offhand" value="ticket" id="ticket"><label for="ticket">Ticket</label></div>
+            <div><input type="checkbox" name="offhand" value="sake" id="sake"><label for="sake">Sake</label></div>
+            <div><input type="checkbox" name="offhand" value="fmask" id="fmask"><label for="fmask">Fox Mask</label></div>
+            <div><input type="checkbox" name="offhand" value="fsweeper" id="fsweeper"><label for="fsweeper">Floor Sweeper</label></div>
+            <div><input type="checkbox" name="offhand" value="icream" id="icream"><label for="icream">Ice Cream</label></div>
+            <div><input type="checkbox" name="offhand" value="spaint" id="spaint"><label for="spaint">Spray Paint</label></div>
+            <div><input type="checkbox" name="offhand" value="pistol" id="pistol"><label for="pistol">Pistol</label></div>
+            <div><input type="checkbox" name="offhand" value="tachi" id="tachi"><label for="tachi">Tachi</label></div>
+            <div><input type="checkbox" name="offhand" value="smask" id="smask"><label for="smask">Sakura Mask</label></div>
+            <div><input type="checkbox" name="offhand" value="bmask" id="bmask"><label for="bmask">Ball Mask</label></div>
+            <div><input type="checkbox" name="offhand" value="football" id="football"><label for="football">Football</label></div>
+            <div><input type="checkbox" name="offhand" value="iykyk" id="iykyk"><label for="iykyk">If you know you know</label></div>
+            <div><input type="checkbox" name="offhand" value="poker" id="poker"><label for="poker">Poker</label></div>
+            <div><input type="checkbox" name="offhand" value="basketball" id="basketball"><label for="basketball">Basketball</label></div>
+            <div><input type="checkbox" name="offhand" value="pspray" id="pspray"><label for="pspray">Paint Spray</label></div>
+            <div><input type="checkbox" name="offhand" value="s7" id="s7"><label for="s7">S7 Token</label></div>
+        </div>
+        <h4>Outfit</h4>
+        <div>
+            <div><input type="checkbox" name="outfit" value="wolj" id="wolj"><label for="wolj">Wrath Olive Leather Jacket</label></div>
+            <div><input type="checkbox" name="outfit" value="gss" id="gss"><label for="gss">Grey Skull Shirt</label></div>
+            <div><input type="checkbox" name="outfit" value="cbv" id="cbv"><label for="cbv">Camo Bulletproof Vest</label></div>
+            <div><input type="checkbox" name="outfit" value="gfs" id="gfs"><label for="gfs">Gluttony Fruit Shirt</label></div>
+            <div><input type="checkbox" name="outfit" value="gm" id="gm"><label for="gm">Gluttony Manto</label></div>
+            <div><input type="checkbox" name="outfit" value="gplj" id="gplj"><label for="gplj">Gluttony Purple Leather Jacket</label></div>
+            <div><input type="checkbox" name="outfit" value="gdj" id="gdj"><label for="gdj">Gluttony Denim Jacket</label></div>
+            <div><input type="checkbox" name="outfit" value="jwb" id="jwb"><label for="jwb">Jacket With Backpack</label></div>
+            <div><input type="checkbox" name="outfit" value="gsbj" id="gsbj"><label for="gsbj">Gluttony Silky Bomber Jacket</label></div>
+            <div><input type="checkbox" name="outfit" value="gy" id="gy"><label for="gy">Gluttony Yukata</label></div>
+            <div><input type="checkbox" name="outfit" value="gs" id="gs"><label for="gs">Gluttony Sweatshirt</label></div>
+            <div><input type="checkbox" name="outfit" value="grdj" id="grdj"><label for="grdj">Greed Denim Jacket</label></div>
+            <div><input type="checkbox" name="outfit" value="grolj" id="grolj"><label for="grolj">Greed Olive Leather Jacket</label></div>
+            <div><input type="checkbox" name="outfit" value="vest" id="vest"><label for="vest">Vest</label></div>
+            <div><input type="checkbox" name="outfit" value="grsbj" id="grsbj"><label for="grsbj">Greed Silky Bomber Jacket</label></div>
+            <div><input type="checkbox" name="outfit" value="grfs" id="grfs"><label for="grfs">Greed Fruit Shirt</label></div>
+            <div><input type="checkbox" name="outfit" value="xt" id="xt"><label for="xt">X T-Shirt</label></div>
+            <div><input type="checkbox" name="outfit" value="grm" id="grm"><label for="grm">Greed Manto</label></div>
+            <div><input type="checkbox" name="outfit" value="gas" id="gas"><label for="gas">Greed Amber Suede</label></div>
+            <div><input type="checkbox" name="outfit" value="grplj" id="grplj"><label for="grplj">Greed Purple Leather Jacket</label></div>
+            <div><input type="checkbox" name="outfit" value="grts" id="grts"><label for="grts">Greed T-Shirt</label></div>
+            <div><input type="checkbox" name="outfit" value="rS7" id="rS7"><label for="rS7">Red S7 Jacket With Backpack</label></div>
+            <div><input type="checkbox" name="outfit" value="gbsj" id="gbsj"><label for="gbsj">Greed Blue Suede Jacket</label></div>
+            <div><input type="checkbox" name="outfit" value="grsw" id="grsw"><label for="grsw">Greed Sweatshirt</label></div>
+            <div><input type="checkbox" name="outfit" value="gralj" id="gralj"><label for="gralj">Greed Amber Leather Jacket</label></div>
+            <div><input type="checkbox" name="outfit" value="b7j" id="b7j"><label for="b7j">Brown 7 Jacket</label></div>
+            <div><input type="checkbox" name="outfit" value="g7j" id="g7j"><label for="g7j">Green 7 Jacket</label></div>
+            <div><input type="checkbox" name="outfit" value="lplj" id="lplj"><label for="lplj">Lust Purple Leather Jacket</label></div>
+        </div>
+        <h4>Accessories</h4>
+        <div>
+            <div><input type="checkbox" name="accessories" value="gh" id="gh"><label for="gh">Gold Hoop</label></div>
+            <div><input type="checkbox" name="accessories" value="helmet" id="helmet"><label for="helmet">Helmet</label></div>
+            <div><input type="checkbox" name="accessories" value="ss" id="ss"><label for="ss">Surgery Scar</label></div>
+            <div><input type="checkbox" name="accessories" value="S7mask" id="S7mask"><label for="S7mask">S7 Mask</label></div>
+        </div>
+        <h4>Mouth</h4>
+        <div>
+            <div><input type="checkbox" name="mouth" value="lol" id="lol"><label for="lol">LOL</label></div>
+            <div><input type="checkbox" name="mouth" value="joy" id="joy"><label for="joy">Joy</label></div>
+            <div><input type="checkbox" name="mouth" value="canine" id="canine"><label for="canine">Canine</label></div>
+            <div><input type="checkbox" name="mouth" value="surprised" id="surprised"><label for="surprised">Surprised</label></div>
+            <div><input type="checkbox" name="mouth" value="grin" id="grin"><label for="grin">Grin</label></div>
+            <div><input type="checkbox" name="mouth" value="gmus" id="gmus"><label for="gmus">Gluttony Mus</label></div>
+            <div><input type="checkbox" name="mouth" value="sly" id="sly"><label for="sly">Sly</label></div>
+            <div><input type="checkbox" name="mouth" value="smoke" id="smoke"><label for="smoke">Smoke</label></div>
+            <div><input type="checkbox" name="mouth" value="cigar" id="cigar"><label for="cigar">Cigar</label></div>
+            <div><input type="checkbox" name="mouth" value="lpop" id="lpop"><label for="lpop">Lollipop</label></div>
+            <div><input type="checkbox" name="mouth" value="yummy" id="yummy"><label for="yummy">Yummy</label></div>
+            <div><input type="checkbox" name="mouth" value="smile" id="smile"><label for="smile">Smile</label></div>
+            <div><input type="checkbox" name="mouth" value="frown" id="frown"><label for="frown">Frown</label></div>
+            <div><input type="checkbox" name="mouth" value="bubble" id="bubble"><label for="bubble">Bubble</label></div>
+        </div>
+        <h4>Mus</h4>
+        <div>
+            <div><input type="checkbox" name="mus" value="grmus" id="grmus"><label for="grmus">Greed Mus</label></div>
+            <div><input type="checkbox" name="mus" value="lust" id="lust"><label for="lust">Lust</label></div>
+        </div>
+        <h4>Position</h4>
+        <div>
+            <div><input type="checkbox" name="position" value="right" id="right"><label for="right">Right</label></div>
+            <div><input type="checkbox" name="position" value="left" id="left"><label for="left">Left</label></div>
+        </div>
+    </aside>
+
+
+    <footer>
+        <p id="copyright">&copy; 2018-2022 Ozone Networks. Inc</p>
+        <p>Name: Riya Patel <br> Email: drriyapatel100@gmail.com <br> Phone: 205-499-8262</p>
+    </footer>
+</body>
+</html>
